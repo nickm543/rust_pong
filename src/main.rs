@@ -78,8 +78,9 @@ async fn main() {
             ball.y = (screen_height() / 2.0) - (ball.h / 2.0);
         }
 
-        draw_text_ex(&player1.score.to_string(), (screen_width() / 2.0) - 20.0, 30.0, text_params);
-        draw_text_ex(&player2.score.to_string(), (screen_width() / 2.0) + 6.0, 30.0, text_params);
+        // Draw score on the screen
+        draw_text_ex(&player1.score.to_string(), (screen_width() / 2.0) - 40.0, 30.0, text_params);
+        draw_text_ex(&player2.score.to_string(), (screen_width() / 2.0) + 25.0, 30.0, text_params);
 
         next_frame().await
     }
